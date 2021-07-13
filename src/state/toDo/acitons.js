@@ -12,7 +12,7 @@ export function addToDo(title){
 
 export function toggleToDoStatus(id, completed){
   return{
-    types: todoTypes.TOGGLE_TODO_STATUS,
+    type: todoTypes.TOGGLE_TODO_STATUS,
     payload: {
       id: id,
       completed: completed,
@@ -22,7 +22,7 @@ export function toggleToDoStatus(id, completed){
 
 export function toggleToDoTitle(id, title){
   return{
-    types: todoTypes.TOGGLE_TODO_TITLE,
+    type: todoTypes.TOGGLE_TODO_TITLE,
     payload: {
       id: id,
       title: title,
@@ -32,7 +32,7 @@ export function toggleToDoTitle(id, title){
 
 export function removeToDo(id){
   return{
-    types: todoTypes.TODO_REMOVE,
+    type: todoTypes.TODO_REMOVE,
     payload: {
       id: id,
     },

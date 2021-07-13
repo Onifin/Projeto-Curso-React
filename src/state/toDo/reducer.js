@@ -17,18 +17,18 @@ export default function reducer(state, action){
           return todo
         }
       })
-      case todoTypes.TOGGLE_TODO_TITLE:
+    case todoTypes.TOGGLE_TODO_TITLE:
       return state.map((todo) => {
         if(todo.id === action.payload.id){
           return{ ...todo, title: action.payload.title }
         }else{
           return todo
         }
+    })
+    case todoTypes.TODO_REMOVE:
+      return state.filter((todos) => {
+        return todos.id !== action.payload.id
       })
-      case todoTypes.TODO_REMOVE:
-        return state.filter((todos) => {
-          return todos.id !== action.payload.id
-        })
     default:
       throw new Error()
   }

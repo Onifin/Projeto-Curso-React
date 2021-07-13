@@ -8,10 +8,12 @@ import styles from './ToDoCreator.module.css';
 
 export default function ToDoCreator(){
   const { dispatchToDo } = useContext(ToDoContext);
-  const { getFieldProps, touched, errors, isValid, handleSubmit} = useFormik({
+  const { getFieldProps, errors, handleSubmit} = useFormik({
     initialValues: {
       title: ''
     },
+    validateOnChange: false,
+    validateOnBlur: false,
     validationSchema: yup.object({
       title: yup.string()
         .required('É preciso preencher com uma tarefa')
@@ -36,13 +38,12 @@ export default function ToDoCreator(){
           ref={inputTitle}
           {...getFieldProps('title')}
         />
-          {touched.title && errors.title ? (
+          {errors.title ? (
             <small className={styles.error}>{errors.title}</small>
           ): null}
         <button 
           className={styles.button}
           type='submit'
-          disabled={!isValid}
         >
           Adicionar
         </button>

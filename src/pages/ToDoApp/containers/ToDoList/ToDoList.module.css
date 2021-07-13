@@ -1,5 +1,18 @@
 .toDoListContainer{
   position: fixed;
   width: 100%;
+  height: calc(100vh - 22rem);
   margin-top: 14rem;
+  padding: 4rem;
+  background-color: rgb(227, 241, 241);
+  overflow-y: scroll;
+}
+
+.toDoListContainer ul{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  list-style: none;
 }

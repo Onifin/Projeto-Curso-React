@@ -1,0 +1,90 @@
+.backDrop{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 40;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal{
+  width: 80rem;
+  height: 20rem;
+  border-radius: 1rem;
+  top: calc(50vh - 10rem);
+  left: calc(50vw - 40rem);
+  background-color: cadetblue;
+  position: fixed;
+  z-index: 99;
+}
+.modal form{
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.input{
+  width: 42rem;
+  height: 3rem;
+  border-radius: 15px;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.input::placeholder{
+  color: cadetblue;
+  opacity: 0.6;
+}
+
+.error{
+  font-size: 0.9rem;
+}
+
+.button{
+  border-radius: 15px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover{
+  background-color: rgb(224, 255, 251);
+  font-size: 1.2rem;
+}
+.button:disabled{
+  font-size: 1rem;
+  background-color: rgb(206, 206, 206);
+}
+.button:disabled:hover{
+  font-size: 1rem;
+  cursor: not-allowed;
+}
+.x{
+  width: 1.5rem;
+}
+
+.buttonClose{
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(227, 241, 241);
+  transition: 0.1s;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 8px 4px rgb(172, 198, 199);
+}
+.buttonClose:hover{
+  background-color: rgb(172, 198, 199);
+  
+  border-radius: 15px;
+  width: 2rem;
+}
